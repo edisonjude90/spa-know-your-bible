@@ -7,6 +7,7 @@ function App() {
     <div className="app">
         <Logo />
         <Questions />
+        <h6>beta</h6>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import Confetti from "../Confetti/Confetti";
 import useGetQuestion from "./useGetQuestion";
 
 const Suggestions = ({ suggestions, selectSuggestion }) => {
@@ -18,9 +19,12 @@ const Questions = () => {
     const {
         hint,
         answer,
+        completed,
         suggestions,
         validateAnswer,
     } = useGetQuestion();
+
+    console.log(completed);
 
     const checkAnswer = (selected) => {
         if (selected === answer) {
@@ -38,20 +42,24 @@ const Questions = () => {
 
     return (
         <>
-            <div>
-                <div className="hintbook">
-                    {hint}
-                </div>
-            </div>
-            <div className="question">
-                The Next Book is ?
-            </div>
-            <div>
-               <Suggestions
-                    suggestions={suggestions}
-                    selectSuggestion={checkAnswer}
-               />
-            </div>
+            {completed ? <Confetti /> : (
+                <>
+                    <div>
+                        <div className="hintbook">
+                            {hint}
+                        </div>
+                    </div>
+                    <div className="question">
+                        The Next Book is ?
+                    </div>
+                    <div>
+                    <Suggestions
+                            suggestions={suggestions}
+                            selectSuggestion={checkAnswer}
+                    />
+                    </div>
+                </>
+            )}
         </>
     );
 }

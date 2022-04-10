@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { allBooks } from "../../Books";
 
 function useGetQuestion() {
@@ -33,9 +33,18 @@ function useGetQuestion() {
         getQuestion();
     }, [getQuestion, cursor]);
 
+    const completed = useMemo(() => {
+        if ((allBooks.length - 1) === cursor) {
+            return true;
+        }
+
+        return false;
+    }, [cursor]);
+
     return {
         hint,
         answer,
+        completed,
         suggestions,
         validateAnswer,
     };
