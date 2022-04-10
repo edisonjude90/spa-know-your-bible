@@ -5,9 +5,53 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #000;
+  background-color: #e3e464;
+}
+
+.correct-ans {
+  background-color: #6be464;
+}
+
+.wrong-ans {
+  background-color: #ea1717;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.logo {
+  margin-top: 141px;
+}
+
+.logoText1 {
+  font-size: 24px;
+}
+
+.logoText2 {
+  font-size: 47px;
+  margin-top: -18px;
+}
+
+.hintbook {
+  width: 50%;
+  margin: 0px auto;
+  padding: 15px;
+  border: solid 1px #000;
+  font-size: 20px;
+}
+
+.question {
+  margin: 30px;
+}
+
+.suggestion {
+  width: 50%;
+  margin: 0px auto 30px auto;
+  padding: 15px;
+  border: solid 1px #000;
+  font-size: 20px;
+  box-shadow: 2px 2px 1px 1px #774b4b54;
 }
