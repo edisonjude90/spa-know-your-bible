@@ -1,6 +1,6 @@
 # Know Your Bible
 
-The app help Bible reads to get use to the order of books in the Bible.
+The app help Bible readers to get use to the order of books in the Bible.
 
 Also test there ability to get the order right :) 
 
